@@ -15,3 +15,11 @@ python = "^3.7"
 [tool.poetry.dev-dependencies]
 wemake-python-styleguide = "^0.8.1"
 mypy = "^0.701.0"
+dephell = "^0.6.0"
+
+
+[tool.dephell.main]
+# we use dephell for convert from poetry to pip-requirements.txt like in task description
+from = {format = "poetry", path = "pyproject.toml"}
+to = {format = "pip", path = "pip-requirements.txt"}
+envs = ["main"]

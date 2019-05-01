@@ -1,0 +1,1 @@
+Contains log sample from test assignment. 
