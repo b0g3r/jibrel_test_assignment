@@ -1,0 +1,4 @@
+-i https://pypi.org/simple/
+dephell==0.*,>=0.6.0
+mypy==0.*,>=0.701.0
+wemake-python-styleguide==0.*,>=0.8.1

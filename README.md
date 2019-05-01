@@ -28,6 +28,10 @@ Use these checks for all code:
 
 Configuration for flake8 and mypy placed in setup.cfg
 
+Use dephell for converting poetry format to requirements.txt format:
+
+`poetry run dephell convert`
+
 ## Structure
 See readmes in directories and docstrings in modules. 
 
