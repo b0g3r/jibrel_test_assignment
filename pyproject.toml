@@ -1,0 +1,17 @@
+[build-system]
+requires = ["poetry==0.12.12"]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry]
+name = "jibrel-test-assignment"
+version = "0.0.1"
+description = ""
+readme = "README.md"
+authors = ["Dima Boger"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+wemake-python-styleguide = "^0.8.1"
+mypy = "^0.701.0"
