@@ -4,14 +4,9 @@ Found and analyze requests by log events.
 
 import math
 from collections import defaultdict
-from typing import DefaultDict, Iterable, List, Optional, Tuple, Set
+from typing import DefaultDict, Iterable, List, Optional, Set, Tuple
 
-from custom_types import EventType
-
-START_REQUEST = 'StartRequest'
-FINISH_REQUEST = 'FinishRequest'
-BACKEND_CONNECT = 'BackendConnect'
-BACKEND_OK = 'BackendOk'
+from custom_types import BACKEND_CONNECT, BACKEND_OK, FINISH_REQUEST, START_REQUEST, EventType
 
 
 class Request:
