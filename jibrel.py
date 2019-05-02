@@ -13,7 +13,7 @@ arg_parser.add_argument(
     'filename',
     help='Full path to logfile with extension',
     nargs='?',
-    default='logs/002.in',
+    default='input.txt',
 )
 arg_parser.add_argument(
     '--throw',
@@ -25,5 +25,6 @@ args = arg_parser.parse_args()
 with open(args.filename) as file_object:
     events = log_parser.log_file(file_object, args.throw)
     failed, percentile_time = log_analyzer.calculate(events)
-    print('Failed requests:', failed)  # noqa: T001
-    print('95% percentile request time', percentile_time / 1000, 'ms')  # noqa: T001
+    with open('output.txt', 'w') as output_file:
+        output_file.write('Failed requests: {0}\n'.format(failed))
+        output_file.write('95% percentile request time {0} ms\n'.format(percentile_time / 1000))
