@@ -18,7 +18,7 @@ arg_parser.add_argument(
 arg_parser.add_argument(
     '--throw',
     help='Turn on the throw mode: app throw out events with not required types for analyze.',
-    action='store_true'
+    action='store_true',
 )
 args = arg_parser.parse_args()
 

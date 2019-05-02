@@ -3,7 +3,7 @@ Contains a few util functions and generators for parsing logs and converting to 
 """
 from typing import IO, Iterator, Optional
 
-from custom_types import EventType, REQUIRED_TYPES
+from custom_types import REQUIRED_TYPES, EventType
 
 
 def log_file(file_object: IO[str], throw: bool) -> Iterator[EventType]:

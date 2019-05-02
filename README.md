@@ -7,14 +7,14 @@ Use python3.6 or python3.7:
 
 `python jibrel.py -h`
 
-Project doesn't require install of any additional requirements to run.
+The project doesn't require installation of any additional requirements to run.
 Main dependency manager is poetry, but I also convert all project 
 dev-requirements to `pip-requirements.txt` (only dev requirements, really)
 
-# How to develop
-python3.7 is requirement for development.
+## How to develop
+python3.7 is a requirement for development.
 
-In the beginning you need to install all requirements 
+In the beginning, you need to install all requirements 
 (see more info in poetry documentation):
 
 `poetry run install`
