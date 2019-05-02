@@ -51,12 +51,15 @@ def calculate(events: Iterable[EventType]) -> Tuple[int, int]:
 
 def build_requests(events: Iterable[EventType]) -> Iterable[Request]:
     """
-    Build requests object from events.
+    Build request objects from events.
+
+    Any request in event log has own id, and we just read the log and
+    add all the found information about request in `Request` object.
     """
     requests_by_id: DefaultDict[int, Request] = defaultdict(Request)
 
-    for timestamp, event_id, event_type, backend_id, _ in events:
-        request = requests_by_id[event_id]
+    for timestamp, request_id, event_type, backend_id, _ in events:
+        request = requests_by_id[request_id]
         if event_type == START_REQUEST:
             request.started_at = timestamp
         elif event_type == FINISH_REQUEST:
