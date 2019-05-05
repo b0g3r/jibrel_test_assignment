@@ -22,4 +22,4 @@ dephell = "^0.7.0"
 # we use dephell for convert from poetry to pip-requirements.txt like in task description
 from = {format = "poetry", path = "pyproject.toml"}
 to = {format = "pip", path = "pip-requirements.txt"}
-envs = ["main"]
+envs = ["dev"]
