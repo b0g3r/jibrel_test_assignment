@@ -27,8 +27,7 @@ Use these checks for all code:
 
 Configuration for flake8 and mypy placed in setup.cfg
 
-Use dephell for converting poetry format to requirements.txt format 
-(see [issue](https://github.com/dephell/dephell/issues/56) about different environments converting):
+Use dephell for converting poetry format dev requirements to requirements.txt format:
 
 `poetry run dephell deps convert`
 
