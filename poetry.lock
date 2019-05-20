@@ -105,7 +105,7 @@ description = "Dependency resolution for Python"
 name = "dephell"
 optional = false
 python-versions = ">=3.5"
-version = "0.7.0"
+version = "0.7.3"
 
 [package.dependencies]
 aiohttp = "*"
@@ -127,6 +127,7 @@ packaging = "*"
 pip = ">=18.0"
 pyyaml = "*"
 requests = "*"
+setuptools = "*"
 tomlkit = "*"
 yaspin = "*"
 
@@ -864,7 +865,7 @@ python-versions = "*"
 version = "0.14.2"
 
 [metadata]
-content-hash = "9c1a6bd81407e2351d1ce5447a3e9ebc3250fe89f4a8e0ff79435c8c5e7bc214"
+content-hash = "4adbcd586f766072c820bd097d6ec312af65de291a8bb96a6347be46afc0da4e"
 python-versions = "^3.6"
 
 [metadata.hashes]
@@ -878,7 +879,7 @@ bandit = ["6102b5d6afd9d966df5054e0bdfc2e73a24d0fea400ec25f2e54c134412158d7", "9
 cerberus = ["7ffefb2ea4159040750ae6e8e8d85660d3ccb8895926b95c90508b803aaad029"]
 certifi = ["59b7658e26ca9c7339e00f8f4636cdfe59d34fa37b9b04f6f9e9926b3cece1a5", "b26104d6835d1f5e49452a26eb2ff87fe7090b89dfcaee5ea2212697e1e1d7ae"]
 chardet = ["84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae", "fc323ffcaeaed0e0a02bf4d117757b98aed530d9ed4531e3e15460124c106691"]
-dephell = ["0763ec233700725321d7f737d87b73235f26f5f5e745762d4e4bde16c71b07ec", "645176e69272c6535b5ed77823cf6bbf22fa66496c616ecd9579b8882a217d08"]
+dephell = ["39be9b301376b1710d11519cabe8c90bf879549b49e35d8e04baed22e4d97222", "edec641e003016742585a594a04f412c0db361df7953d058ca79168f4427db53"]
 dephell-archive = ["48f4fc1943b190cf1f2a6aa044fbc3cef03a789ccbd7cceb9f0ee212f805b48c", "d20e24cad496d0a39a3f24f0b8d39244120bf024b7db495c4286a940ea02c66c"]
 dephell-discover = ["33fed5ea923a3c96327da7c5886e4b392b02992ef551ae8e63ca185bfc5ea360", "878d78f5ff2590f6849ae652abe4e4d1b8bf75364b40c8102bd9caa861a42025"]
 dephell-licenses = ["54ebb0f1851476f216f25aea7dcc818fa6a26f7b44a8a7eb3efda55aa81deba4", "e75230d26b44a6b27f366cafe84b02c00ebf87098e16761d2873b49288551127"]
