@@ -47,14 +47,6 @@ version = "3.0.1"
 
 [[package]]
 category = "dev"
-description = "Simple decorator to set attributes of target function or class in a DRY way."
-name = "attr"
-optional = false
-python-versions = "*"
-version = "0.3.1"
-
-[[package]]
-category = "dev"
 description = "Classes Without Boilerplate"
 name = "attrs"
 optional = false
@@ -74,6 +66,15 @@ GitPython = ">=1.0.1"
 PyYAML = ">=3.12"
 six = ">=1.10.0"
 stevedore = ">=1.20.0"
+
+[[package]]
+category = "dev"
+description = "a hat"
+marker = "python_version >= \"3.6\""
+name = "bowler"
+optional = false
+python-versions = "*"
+version = "0.0.1"
 
 [[package]]
 category = "dev"
@@ -105,30 +106,37 @@ description = "Dependency resolution for Python"
 name = "dephell"
 optional = false
 python-versions = ">=3.5"
-version = "0.7.0"
+version = "0.7.5"
 
 [package.dependencies]
 aiohttp = "*"
 appdirs = "*"
 attrs = "*"
-cerberus = "*"
-dephell-archive = "*"
-dephell-discover = "*"
-dephell-licenses = "*"
-dephell-links = "*"
-dephell-markers = "*"
-dephell-pythons = "*"
-dephell-shells = "*"
-dephell-specifier = ">=0.1.4"
-dephell-venvs = "*"
+cerberus = ">=1.3"
+dephell-archive = ">=0.1.5"
+dephell-discover = ">=0.2.6"
+dephell-licenses = ">=0.1.6"
+dephell-links = ">=0.1.4"
+dephell-markers = ">=1.0.0"
+dephell-pythons = ">=0.1.11"
+dephell-shells = ">=0.1.3"
+dephell-specifier = ">=0.1.7"
+dephell-venvs = ">=0.1.16"
+dephell-versioning = "*"
+html5lib = "*"
 jinja2 = "*"
 m2r = "*"
 packaging = "*"
 pip = ">=18.0"
 pyyaml = "*"
 requests = "*"
+setuptools = "*"
 tomlkit = "*"
 yaspin = "*"
+
+[package.dependencies.bowler]
+python = ">=3.6"
+version = "*"
 
 [[package]]
 category = "dev"
@@ -136,7 +144,7 @@ description = "pathlib for archives"
 name = "dephell-archive"
 optional = false
 python-versions = ">=3.5"
-version = "0.1.3"
+version = "0.1.5"
 
 [package.dependencies]
 attrs = "*"
@@ -147,10 +155,10 @@ description = "Find project modules and data files (packages and package_data fo
 name = "dephell-discover"
 optional = false
 python-versions = ">=3.5"
-version = "0.1.3"
+version = "0.2.7"
 
 [package.dependencies]
-attr = "*"
+attrs = "*"
 
 [[package]]
 category = "dev"
@@ -158,7 +166,7 @@ description = "Get info about OSS licenses"
 name = "dephell-licenses"
 optional = false
 python-versions = ">=3.5"
-version = "0.1.4"
+version = "0.1.6"
 
 [package.dependencies]
 attrs = "*"
@@ -170,7 +178,7 @@ description = "Parse dependency links"
 name = "dephell-links"
 optional = false
 python-versions = ">=3.5"
-version = "0.1.1"
+version = "0.1.4"
 
 [package.dependencies]
 attrs = "*"
@@ -181,7 +189,7 @@ description = "Work with environment markers (PEP-496)"
 name = "dephell-markers"
 optional = false
 python-versions = ">=3.5"
-version = "0.2.4"
+version = "1.0.0"
 
 [package.dependencies]
 attrs = "*"
@@ -194,7 +202,7 @@ description = "Work with python versions"
 name = "dephell-pythons"
 optional = false
 python-versions = ">=3.5"
-version = "0.1.9"
+version = "0.1.12"
 
 [package.dependencies]
 attrs = "*"
@@ -207,7 +215,7 @@ description = "activate virtual environment for current shell"
 name = "dephell-shells"
 optional = false
 python-versions = ">=3.5"
-version = "0.1.1"
+version = "0.1.3"
 
 [package.dependencies]
 attrs = "*"
@@ -220,10 +228,10 @@ description = "Work with version specifiers."
 name = "dephell-specifier"
 optional = false
 python-versions = ">=3.5"
-version = "0.1.4"
+version = "0.2.1"
 
 [package.dependencies]
-packaging = "*"
+packaging = ">=17.1"
 
 [[package]]
 category = "dev"
@@ -231,11 +239,22 @@ description = "Manage virtual environments"
 name = "dephell-venvs"
 optional = false
 python-versions = ">=3.5"
-version = "0.1.14"
+version = "0.1.16"
 
 [package.dependencies]
 attrs = "*"
 dephell-pythons = "*"
+
+[[package]]
+category = "dev"
+description = "Library for bumping project version like a pro"
+name = "dephell-versioning"
+optional = false
+python-versions = ">=3.5"
+version = "0.1.0"
+
+[package.dependencies]
+packaging = "*"
 
 [[package]]
 category = "dev"
@@ -504,6 +523,18 @@ version = "2.1.11"
 
 [package.dependencies]
 gitdb2 = ">=2.0.0"
+
+[[package]]
+category = "dev"
+description = "HTML parser based on the WHATWG HTML specification"
+name = "html5lib"
+optional = false
+python-versions = "*"
+version = "1.0.1"
+
+[package.dependencies]
+six = ">=1.9"
+webencodings = "*"
 
 [[package]]
 category = "dev"
@@ -813,6 +844,14 @@ version = "1.24.2"
 
 [[package]]
 category = "dev"
+description = "Character encoding aliases for legacy web content"
+name = "webencodings"
+optional = false
+python-versions = "*"
+version = "0.5.1"
+
+[[package]]
+category = "dev"
 description = "The strictest and most opinionated python linter ever"
 name = "wemake-python-styleguide"
 optional = false
@@ -864,7 +903,7 @@ python-versions = "*"
 version = "0.14.2"
 
 [metadata]
-content-hash = "9c1a6bd81407e2351d1ce5447a3e9ebc3250fe89f4a8e0ff79435c8c5e7bc214"
+content-hash = "5605c274d6a7212cd0a3da28b934b82e549d37469cd1becce1f0b99b4d9437c0"
 python-versions = "^3.6"
 
 [metadata.hashes]
@@ -872,22 +911,23 @@ aiohttp = ["00d198585474299c9c3b4f1d5de1a576cc230d562abc5e4a0e81d71a20a6ca55", "
 appdirs = ["9e5896d1372858f8dd3344faf4e5014d21849c756c8d5701f78f8a103b372d92", "d8b24664561d0d34ddfaec54636d502d7cea6e29c3eaf68f3df6180863e2166e"]
 astor = ["95c30d87a6c2cf89aa628b87398466840f0ad8652f88eb173125a6df8533fb8d", "fb503b9e2fdd05609fbf557b916b4a7824171203701660f0c55bbf5a7a68713e"]
 async-timeout = ["0c3c816a028d47f659d6ff5c745cb2acf1f966da1fe5c19c77a70282b25f4c5f", "4291ca197d287d274d0b6cb5d6f8f8f82d434ed288f962539ff18cc9012f9ea3"]
-attr = ["0b1aaddb85bd9e9c4bd75092f4440d6616ff40b0df0437f00771871670f7c9fd", "9091548058d17f132596e61fa7518e504f76b9a4c61ca7d86e1f96dbf7d4775d"]
 attrs = ["10cbf6e27dbce8c30807caf056c8eb50917e0eaafe86347671b57254006c3e69", "ca4be454458f9dec299268d472aaa5a11f67a4ff70093396e1ceae9c76cf4bbb"]
 bandit = ["6102b5d6afd9d966df5054e0bdfc2e73a24d0fea400ec25f2e54c134412158d7", "9413facfe9de1e1bd291d525c784e1beb1a55c9916b51dae12979af63a69ba4c"]
+bowler = ["15deef7f153fd8589ff0c7c9ec851800caae53c76edf63c13128d5a527989be1"]
 cerberus = ["7ffefb2ea4159040750ae6e8e8d85660d3ccb8895926b95c90508b803aaad029"]
 certifi = ["59b7658e26ca9c7339e00f8f4636cdfe59d34fa37b9b04f6f9e9926b3cece1a5", "b26104d6835d1f5e49452a26eb2ff87fe7090b89dfcaee5ea2212697e1e1d7ae"]
 chardet = ["84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae", "fc323ffcaeaed0e0a02bf4d117757b98aed530d9ed4531e3e15460124c106691"]
-dephell = ["0763ec233700725321d7f737d87b73235f26f5f5e745762d4e4bde16c71b07ec", "645176e69272c6535b5ed77823cf6bbf22fa66496c616ecd9579b8882a217d08"]
-dephell-archive = ["48f4fc1943b190cf1f2a6aa044fbc3cef03a789ccbd7cceb9f0ee212f805b48c", "d20e24cad496d0a39a3f24f0b8d39244120bf024b7db495c4286a940ea02c66c"]
-dephell-discover = ["33fed5ea923a3c96327da7c5886e4b392b02992ef551ae8e63ca185bfc5ea360", "878d78f5ff2590f6849ae652abe4e4d1b8bf75364b40c8102bd9caa861a42025"]
-dephell-licenses = ["54ebb0f1851476f216f25aea7dcc818fa6a26f7b44a8a7eb3efda55aa81deba4", "e75230d26b44a6b27f366cafe84b02c00ebf87098e16761d2873b49288551127"]
-dephell-links = ["3b7294e55e8e0895c5c9363d7346e85e567d38b82b9acef9bb9b7e487a543f2c", "ef11c8fca22ea5ccb0912870b6e12f11716e6a99a6d082f17b53b2f8ef4526a7"]
-dephell-markers = ["1d5b8ddbf631257c58716913ef3c851ff7e54bf95f76f4a730d9db324a9a1a1f", "5de97c8d4e64c5bb814a78baac7292a71bf68c40929a4e789c1355a0ebd1d71d"]
-dephell-pythons = ["922869d83ceb1386d7afd9763bfbb09a035cbf0b4ac1174f59667d16e0553316", "92619d23832778c8d57ef1213b1d613d250f312e342fc8eafbd84909c1aea02c"]
-dephell-shells = ["6bdbe16377c6a02d8ec1784be40b7976f95a6330eb9fb3c1e09e040a3fcb0b4f", "774f6b4652bfa6dc9f601d2c0f05f3b51e00729636b5eb6099360e0be4bed28d"]
-dephell-specifier = ["23ed0ea2c3161b3854fc3dd741f4bbccf97ce4bb24c7e5e862b3873e3cb2b2ba", "2dd69cf4c8a1452981b8360b4f0e0a5b0d1b5ce74bb4e5be77dee30f1f1d830e"]
-dephell-venvs = ["c04a09835a4494462421e384ac7af91328126ff7b0d651f4233c4a5f61c518b8", "d2871fd5be0ac492317158bea7875ba0c0f96fc2a7e51581593e8c955e294db4"]
+dephell = ["346b358ae50eca417127fe86a7d9f36586747a1e922b67e24f270061858bfbb8", "a8da23c952fc374f43efa84564e624c83a9440621e10b45838b195c9f1daba3f"]
+dephell-archive = ["d1cff5a962cb7b5862aaddfef4d1ec77684ee69652ba3d75612c7e4bb9c7bb39", "fe526ef20a117609f9abd656f490bac1140a05b5a367c6a194e6bbd3690de7df"]
+dephell-discover = ["316f2038479fd0674005987758c2341ed00cc8be8088085b0fcc8cdcf6ce83d0", "ab949ba595feccf39c08f01c2e3e4b5b50f29148c78cfe2fb05394b4bb76d834"]
+dephell-licenses = ["1b2c6b090308055ec608bd91c68f5111ac7581236d1215c00d949a842466fe1a", "e190c8c2bd63a1524943c734ead82877591356585c9fb4f85f80e156b68ca999"]
+dephell-links = ["421db613fb291bc723aafe3e331e1691d15b8753bb0ded63e8e991e8422ceaf6", "ef9c0885e4e5d67793c7ddf2115bee3949001e2a62381a2cccef38fda9264512"]
+dephell-markers = ["0388c16d9752e8a2c28975560829326578180339a8a392f73eb699f5c502c46d", "c98488e8268f79786f1d7be1a771b6d1cd3aa44969a33d5cfb69efde0122b3e9"]
+dephell-pythons = ["6831c41204d6487dc2a1042ea2dc4ae57dbf36cf58d24b247eb2bf31b310d8a5", "8ba8e90b18316f061d1597123eb1fe14b18a063ae99a762d07c0f0d553864584"]
+dephell-shells = ["420de1c53cfd6c4a6b11aef5d8a93701b479ab6ef72bae8e0b5b51167e7ba1f9", "bd052244c422a64528b71b440e1b166f150fef6bf413441d72d94b75085b24b0"]
+dephell-specifier = ["c2ec7e62a2406960e19eb6db0f11918d82af64995ee1f26fe00d013791ae9758", "de46325cfd6adedf5f685a3c00242d8a16fe270a7a76948fd1957c99561eb89e"]
+dephell-venvs = ["3675c0a905a5c29516937c686713d9387b8f8d3f3243dccec5e203e294c9b549", "d26ef6ffb742183b77f7424e80eece5ae8b4374f612a1a70bd9f16a1f1342869"]
+dephell-versioning = ["b771376fff5096568dfe49776b033ef46bd3ead16a31db7da7c6618d6c1d2dfb", "ea0d97e7ecdbce503afb90fd14430b4c88924047e004f6060eeb5699d1746330"]
 docutils = ["02aec4bd92ab067f6ff27a38a38a41173bf01bed8f89157768c1573f53e474a6", "51e64ef2ebfb29cae1faa133b3710143496eca21c530f3f71424d77687764274", "7a4bd47eaf6596e1295ecb11361139febe29b084a87bf005bf899f9a42edc3c6"]
 entrypoints = ["589f874b313739ad35be6e0cd7efde2a4e9b6fea91edcc34e58ecbb8dbe56d19", "c70dd71abe5a8c85e55e12c19bd91ccfeec11a6e99044204511f9ed547d48451"]
 eradicate = ["4ffda82aae6fd49dfffa777a857cb758d77502a1f2e0f54c9ac5155a39d2d01a"]
@@ -912,6 +952,7 @@ flake8-quotes = ["fd9127ad8bbcf3b546fa7871a5266fd8623ce765ebe3d5aa5eabb80c01212b
 flake8-string-format = ["68ea72a1a5b75e7018cae44d14f32473c798cf73d75cbaed86c6a9a907b770b2", "774d56103d9242ed968897455ef49b7d6de272000cfa83de5814273a868832f1"]
 gitdb2 = ["83361131a1836661a155172932a13c08bda2db3674e4caa32368aa6eb02f38c2", "e3a0141c5f2a3f635c7209d56c496ebe1ad35da82fe4d3ec4aaa36278d70648a"]
 gitpython = ["563221e5a44369c6b79172f455584c9ebbb122a13368cc82cb4b5addff788f82", "8237dc5bfd6f1366abeee5624111b9d6879393d84745a507de0fda86043b65a8"]
+html5lib = ["20b159aa3badc9d5ee8f5c647e5efd02ed2a66ab8d354930bd9ff139fc1dc0a3", "66cb0dcfdbbc4f9c3ba1a63fdb511ffdbd4f513b2b6d81b80cd26ce6b3fb3736"]
 idna = ["c357b3f628cf53ae2c4c05627ecc484553142ca23264e593d327bcde5e9c3407", "ea8b7f6188e6fa117537c3df7da9fc686d485087abf6ac197f9c46432f7e4a3c"]
 idna-ssl = ["a933e3bb13da54383f9e8f35dc4f9cb9eb9b3b78c6b36f311254d6d0d92c6c7c"]
 isort = ["01cb7e1ca5e6c5b3f235f0385057f70558b70d2f00320208825fa62887292f43", "268067462aed7eb2a1e237fcb287852f22077de3fb07964e87e00f829eea2d1a"]
@@ -945,6 +986,7 @@ typed-ast = ["132eae51d6ef3ff4a8c47c393a4ef5ebf0d1aecc96880eb5d6c8ceab7017cc9b",
 typing = ["4027c5f6127a6267a435201981ba156de91ad0d1d98e9ddc2aa173453453492d", "57dcf675a99b74d64dacf6fba08fb17cf7e3d5fdff53d4a30ea2a5e7e52543d4", "a4c8473ce11a65999c8f59cb093e70686b6c84c98df58c1dae9b3b196089858a"]
 typing-extensions = ["07b2c978670896022a43c4b915df8958bec4a6b84add7f2c87b2b728bda3ba64", "f3f0e67e1d42de47b5c67c32c9b26641642e9170fe7e292991793705cd5fef7c", "fb2cd053238d33a8ec939190f30cfd736c00653a85a2919415cecf7dc3d9da71"]
 urllib3 = ["4c291ca23bbb55c76518905869ef34bdd5f0e46af7afe6861e8375643ffee1a0", "9a247273df709c4fedb38c711e44292304f73f39ab01beda9f6b9fc375669ac3"]
+webencodings = ["a0af1213f3c2226497a97e2b3aa01a7e4bee4f403f95be16fc9acd2947514a78", "b36a1c245f2d304965eb4e0a82848379241dc04b865afcc4aab16748587e1923"]
 wemake-python-styleguide = ["0509b114f0446a30595e99d25566669c9f1ad9972b9d322ef27a22b8db19ba20", "0a94915dd1c48ca541a78a73b1c7e65cc023c3bd1c5d10b0a3f9dd23f2d4c4e6"]
 yarl = ["024ecdc12bc02b321bc66b41327f930d1c2c543fa9a561b39861da9388ba7aa9", "2f3010703295fbe1aec51023740871e64bb9664c789cba5a6bdf404e93f7568f", "3890ab952d508523ef4881457c4099056546593fa05e93da84c7250516e632eb", "3e2724eb9af5dc41648e5bb304fcf4891adc33258c6e14e2a7414ea32541e320", "5badb97dd0abf26623a9982cd448ff12cb39b8e4c94032ccdedf22ce01a64842", "73f447d11b530d860ca1e6b582f947688286ad16ca42256413083d13f260b7a0", "7ab825726f2940c16d92aaec7d204cfc34ac26c0040da727cf8ba87255a33829", "b25de84a8c20540531526dfbb0e2d2b648c13fd5dd126728c496d7c3fea33310", "c6e341f5a6562af74ba55205dbd56d248daf1b5748ec48a0200ba227bb9e33f4", "c9bb7c249c4432cd47e75af3864bc02d26c9594f49c82e2a28624417f0ae63b8", "e060906c0c585565c718d1c3841747b61c5439af2211e185f6739a9412dfbde1"]
 yaspin = ["84bfdea26e7f7a93256a218ec9e2276679fadecb241c128436463116f56276f9", "9b76e240123cdc510fb636a1d71b21145fefddfc8a18c7ed64dc6c40e7efe457"]
